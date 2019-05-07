@@ -1,0 +1,48 @@
+﻿<Window x:Class="MailSender.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSender"
+
+        Title="WpfMailSender" 
+        Height="450" Width="800">
+    <Grid RenderTransformOrigin="0,0" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleX="0" AngleY="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Имя пользователя" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserNameEdit" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222"/>
+        <Label Content="Пароль" Margin="251,18,457,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PasswordEdit" Margin="251,49,300,0" VerticalAlignment="Top"/>
+        <Button Content="Button" 
+                Margin="563,0,49,327" 
+                RenderTransformOrigin="0.5,0.5" 
+                Height="47" 
+                VerticalAlignment="Bottom" Click="OnSendButtonClick"
+                >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="TitleMessadge" HorizontalAlignment="Left" Height="30" Margin="10,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="482"  RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="MailMessadge" HorizontalAlignment="Left" Height="261" Margin="10,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="752"  RenderTransformOrigin="0.5,0.5"/>
+
+    </Grid>
+</Window>
